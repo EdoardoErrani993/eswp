@@ -23,20 +23,20 @@
         	try {
                 switch (this.readyState) {
                 case XMLHttpRequest.OPENED:
-                    target.value += "[Server connection established]\n";
+                    target.value += "[Paolo]\n";
                     return;
                 case XMLHttpRequest.HEADERS_RECEIVED:
-                    target.value += "[Request received]\n";
+                    target.value += "[Paolo ]\n";
                     return;
                 case XMLHttpRequest.LOADING:
-                    target.value += "[Processing request]\n";
+                    target.value += "[Paolo]\n";
                     return;
                 case XMLHttpRequest.DONE:
-                    target.value += "[Response is ready]\n";
+                    target.value += "[Paolo]\n";
                     break;
                 default:
                     // UNSENT
-                    target.value += "[Request not initialized or error " + this.readyState + "]\n";
+                    target.value += "[Paolo " + this.readyState + "]\n";
                     return;
                 }
             } catch (e) {
@@ -45,7 +45,8 @@
             }
 
             if (this.status != 200) {
-                target.value += "[Something went wrong: " + this.status + "]\n";
+                target.value += "
+                Paolo " + this.status + "]\n";
                 return;
             }
 
